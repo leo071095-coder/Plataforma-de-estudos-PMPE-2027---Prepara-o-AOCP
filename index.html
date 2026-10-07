@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20251a">
+  <meta name="description" content="Plataforma pessoal de estudos PMPE 2027 — Preparação AOCP.">
+  <title>PMPE 2027 | Preparação AOCP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div><strong>PMPE <span>2027</span></strong><small>PREPARAÇÃO AOCP</small></div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="inicio"><span>⌂</span> Visão geral</button>
+        <button class="nav-item" data-page="materias"><span>▤</span> Matérias</button>
+        <button class="nav-item" data-page="questoes"><span>☷</span> Questões</button>
+        <button class="nav-item" data-page="simulado"><span>◷</span> Simulado</button>
+        <button class="nav-item" data-page="revisao"><span>✦</span> Revisão e favoritos</button>
+        <button class="nav-item" data-page="progresso"><span>↗</span> Meu progresso</button>
+      </nav>
+      <div class="sidebar-note"><span class="status-dot"></span> Área pessoal de estudos<br><small>Seu progresso fica salvo neste navegador.</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
+        <div><div class="eyebrow">PLANO DE PREPARAÇÃO</div><h1 id="pageTitle">Visão geral</h1></div>
+        <div class="topbar-tag">FOCO <b>AOCP</b></div>
+      </header>
+
+      <section class="page active" id="page-inicio">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow gold-text">DISCIPLINA • CONSTÂNCIA • RESULTADO</div>
+            <h2>Uma questão de cada vez.<br><em>Sua aprovação é construída.</em></h2>
+            <p>Organize sua preparação para a PMPE 2027, pratique questões e acompanhe sua evolução.</p>
+            <button class="btn btn-gold" data-goto="questoes">Começar a estudar <span>→</span></button>
+          </div>
+          <div class="hero-emblem"><div class="emblem-ring"><span>PM</span><b>PE</b><small>2027</small></div></div>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-label">QUESTÕES RESPONDIDAS</div><div class="stat-number" id="statAnswered">0</div><div class="stat-foot">No seu navegador</div></article>
+          <article class="stat-card"><div class="stat-label">TAXA DE ACERTO</div><div class="stat-number" id="statRate">—</div><div class="stat-foot">Com base nas respostas corrigidas</div></article>
+          <article class="stat-card"><div class="stat-label">FAVORITAS</div><div class="stat-number" id="statFav">0</div><div class="stat-foot">Para revisar depois</div></article>
+          <article class="stat-card"><div class="stat-label">SIMULADOS CONCLUÍDOS</div><div class="stat-number" id="statMocks">0</div><div class="stat-foot">Histórico pessoal</div></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel">
+            <div class="panel-heading"><div><div class="eyebrow">SEU ROTEIRO</div><h3>Estude com método</h3></div><span class="panel-icon">✦</span></div>
+            <div class="route-list">
+              <div class="route-item"><span class="route-num">01</span><div><b>Estude a teoria</b><p>Leia a legislação e marque os conceitos essenciais.</p></div></div>
+              <div class="route-item"><span class="route-num">02</span><div><b>Resolva questões</b><p>Treine interpretação e literalidade no estilo de prova.</p></div></div>
+              <div class="route-item"><span class="route-num">03</span><div><b>Revise seus erros</b><p>Transforme cada erro em um ponto de aprendizagem.</p></div></div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-heading"><div><div class="eyebrow">ACESSO RÁPIDO</div><h3>Continuar preparação</h3></div></div>
+            <button class="quick-link" data-goto="materias"><span class="quick-icon">▤</span><span><b>Biblioteca de matérias</b><small>Disciplinas para organizar seu estudo</small></span><strong>→</strong></button>
+            <button class="quick-link" data-goto="questoes"><span class="quick-icon">☷</span><span><b>Banco de questões</b><small>Responda e confira comentários</small></span><strong>→</strong></button>
+            <button class="quick-link" data-goto="simulado"><span class="quick-icon">◷</span><span><b>Simulado rápido</b><small>Teste seus conhecimentos</small></span><strong>→</strong></button>
+          </article>
+        </div>
+        <div class="notice"><b>Importante:</b> este é o esqueleto funcional inicial. Confira sempre a legislação vigente e o edital oficial da PMPE. As questões demonstrativas não substituem o conteúdo completo do edital.</div>
+      </section>
+
+      <section class="page" id="page-materias">
+        <div class="section-intro"><div class="eyebrow">BIBLIOTECA</div><h2>Matérias de preparação</h2><p>Escolha uma disciplina para filtrar as questões disponíveis. A lista pode ser ajustada conforme o edital oficial.</p></div>
+        <div class="subject-grid" id="subjectGrid"></div>
+      </section>
+
+      <section class="page" id="page-questoes">
+        <div class="section-intro"><div class="eyebrow">TREINO DIRECIONADO</div><h2>Banco de questões</h2><p>Questões demonstrativas com correção e comentário. Seu histórico fica salvo localmente.</p></div>
+        <div class="filters">
+          <label>Disciplina<select id="subjectFilter"><option value="Todas">Todas as disciplinas</option></select></label>
+          <label>Exibição<select id="questionFilter"><option value="todas">Todas</option><option value="naoRespondidas">Não respondidas</option><option value="erros">Meus erros</option><option value="favoritas">Favoritas</option></select></label>
+        </div>
+        <div id="questionsList" class="questions-list"></div>
+      </section>
+
+      <section class="page" id="page-simulado">
+        <div class="section-intro"><div class="eyebrow">MODO DE PROVA</div><h2>Simulado rápido</h2><p>Responda às questões e finalize para ver seu resultado. Esta versão usa uma amostra demonstrativa.</p></div>
+        <div class="mock-banner"><div><div class="eyebrow gold-text">TREINO PESSOAL</div><h3>Simulado de conhecimentos gerais</h3><p>4 questões • sem limite de tempo nesta versão</p></div><button class="btn btn-gold" id="startMock">Iniciar simulado</button></div>
+        <div id="mockArea"></div>
+      </section>
+
+      <section class="page" id="page-revisao">
+        <div class="section-intro"><div class="eyebrow">MEMORIZAÇÃO</div><h2>Revisão e favoritos</h2><p>Revisite questões marcadas ou aquelas que você errou.</p></div>
+        <div class="review-tabs"><button class="chip active" data-review="favoritas">Favoritas</button><button class="chip" data-review="erros">Questões erradas</button></div>
+        <div id="reviewList" class="questions-list"></div>
+      </section>
+
+      <section class="page" id="page-progresso">
+        <div class="section-intro"><div class="eyebrow">ACOMPANHAMENTO</div><h2>Meu progresso</h2><p>Veja seus resultados registrados neste navegador e faça uma cópia de segurança.</p></div>
+        <div class="stats-grid progress-stats">
+          <article class="stat-card"><div class="stat-label">RESPONDIDAS</div><div class="stat-number" id="progressAnswered">0</div></article>
+          <article class="stat-card"><div class="stat-label">ACERTOS</div><div class="stat-number" id="progressCorrect">0</div></article>
+          <article class="stat-card"><div class="stat-label">ERROS</div><div class="stat-number" id="progressWrong">0</div></article>
+          <article class="stat-card"><div class="stat-label">SIMULADOS</div><div class="stat-number" id="progressMocks">0</div></article>
+        </div>
+        <article class="panel"><div class="panel-heading"><div><div class="eyebrow">SEUS DADOS</div><h3>Backup e restauração</h3></div></div><p class="muted">Exporte seus registros antes de limpar o navegador ou trocar de dispositivo. O arquivo de backup contém suas respostas e favoritos.</p><div class="button-row"><button class="btn btn-dark" id="exportData">Exportar backup</button><label class="btn btn-outline file-button">Importar backup<input type="file" id="importData" accept="application/json"></label><button class="btn btn-outline" id="resetData">Apagar progresso</button></div><p id="backupMessage" class="small-message" aria-live="polite"></p></article>
+        <div class="notice">Os dados não são sincronizados entre dispositivos. Para acessar o mesmo progresso em outro aparelho, exporte o backup e importe-o no outro navegador.</div>
+      </section>
+
+      <footer class="footer"><span>PMPE 2027 — Preparação AOCP</span><span>Projeto pessoal de estudos • Versão inicial</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

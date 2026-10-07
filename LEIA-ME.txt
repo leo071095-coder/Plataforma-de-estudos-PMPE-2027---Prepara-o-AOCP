@@ -1,0 +1,38 @@
+# PMPE 2027 — Preparação AOCP
+
+Versão inicial de uma plataforma pessoal de estudos, com identidade visual militar em verde-oliva, preto e dourado.
+
+## Arquivos
+- `index.html`: estrutura do site.
+- `style.css`: identidade visual e adaptação para celular.
+- `app.js`: questões de demonstração, correção, favoritos, simulados e armazenamento local.
+
+## Como testar no computador
+1. Extraia o arquivo ZIP para uma pasta.
+2. Abra a pasta.
+3. Dê dois cliques em `index.html`.
+4. O site abrirá no navegador.
+
+## Como publicar gratuitamente no GitHub Pages
+1. Entre em https://github.com e faça login.
+2. Abra o repositório que você já criou para o site. Se ainda não existir, crie um repositório novo.
+3. Dentro do repositório, escolha **Add file** → **Upload files**.
+4. Envie `index.html`, `style.css` e `app.js` (pode enviar os três arquivos juntos; não envie apenas o ZIP).
+5. Clique em **Commit changes**.
+6. Abra **Settings** → **Pages**.
+7. Em **Build and deployment**, selecione **Deploy from a branch**.
+8. Escolha a branch `main` e a pasta `/ (root)`, depois clique em **Save**.
+9. Aguarde a publicação e abra o endereço que aparecer na seção Pages.
+
+Se a interface mostrar opções diferentes, procure por “Pages” dentro de Settings.
+
+## Importante sobre dados e privacidade
+- O site é uma página estática e não exige servidor.
+- As respostas, favoritos e progresso ficam no `localStorage` do navegador.
+- Os dados não sincronizam automaticamente entre computador e celular.
+- Use a página “Meu progresso” para exportar/importar um backup.
+- O endereço do GitHub Pages normalmente é público. A configuração de “uso pessoal” significa que só você pretende usar o site; ela não impede outras pessoas de abrir o endereço.
+- Para não depender de uma conexão com Google Fonts, a fonte alternativa do sistema continuará funcionando se o serviço estiver indisponível.
+
+## Conteúdo
+As questões incluídas são demonstrativas e em quantidade limitada para validar o funcionamento. Antes de estudar para a prova, confira o edital oficial da PMPE e a legislação consolidada vigente. Acrescente novas questões em `app.js`, no array `QUESTIONS`, seguindo o formato já existente.
